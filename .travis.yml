@@ -1,0 +1,18 @@
+language: python
+
+python:
+    - '3.5'
+    - '3.6'
+
+install: pip install sanic jinja2 markdown2 pymongo xpinyin pytest aiohttp
+
+services: mongodb
+
+notifications:
+    email:
+        recipients:
+            - m85091081@gmail.com
+        on_success: always
+        on_failure: always
+        
+script: make test
